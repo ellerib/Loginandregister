@@ -259,7 +259,7 @@ p{
             <h3> Main </h3>
             <!-- FIRST PANEL -->
             <a href="#"> Dashboard </a>
-            <a href="#"> User Management </a>
+            <a href="usermanagement.php"> User Management </a>
             <a href="#"> Products </a>
             <a href="#"> Suppliers </a>
             <a href="#"> Reports </a>

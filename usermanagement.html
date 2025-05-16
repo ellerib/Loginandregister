@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  /*--------------------------------SIDE BAR NA PART---------------------------------- */
+  a {
+    color: inherit;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+  }
+  .sidebar {
+    width: 250px;
+    background-color: #a85f03;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 30px;
+  }
+  
+  .sidebar nav ul,
+  .sidebar .settings ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar li.active {
+    font-weight: bold;
+  }
+  
+  .sidebar li:hover {
+
+    background-color: #7c4501;
+    color: white;
+}
+
+  .extension{
+    color: #f1b11e;
+    font-weight: bold;
+
+  }
+  /*----------------------------------------------------------------------------------------------- */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    background-color: #f4a261;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .user-management .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-management h1 {
+    margin: 0;
+  }
+  
+  .user-management p {
+    margin: 5px 0 20px;
+    color: gray;
+  }
+  
+  .add-user-btn {
+    background-color: #f77f00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-filter input,
+  .search-filter select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.85em;
+  }
+  
+  .purple {
+    background-color: #e0bbff;
+    color: #6f42c1;
+  }
+  
+  .teal {
+    background-color: #b2f2bb;
+    color: #2b9348;
+  }
+  
+  .green {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .red {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  a.delete {
+    color: #dc3545;
+  }
+    </style>
+  <meta charset="UTF-8">
+  <title>User Management - Bugasan ni Mayang</title>
+  <link rel="stylesheet" href="UserManagement.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Bugasan ni<br>Mayang</h2>
+      <nav>
+        <p class = "extension">MAIN</p>
+        <ul>
+          <li><a href="Dashboard.html">Dashboard</a></li>
+          <li class="active">User Management</li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Suppliers</a></li>
+          <li><a href="">Reports</a></li>
+        </ul>
+      </nav>
+      <div class="settings">
+        <p class = "extension">SETTINGS</p>
+        <ul>
+          <li><a href="">Settings</a></li>
+          <li><a href="">Logout</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <div class="user-profile">
+          <div class="avatar">A</div>
+          <span>Admin User</span>
+        </div>
+      </header>
+
+      <section class="user-management">
+        <div class="header">
+          <h1>User Management</h1>
+          <p>Manage employees and admin access</p>
+          <button class="add-user-btn">+ Add New User</button>
+        </div>
+
+        <div class="search-filter">
+          <input type="text" placeholder="Search users...">
+          <select>
+            <option>All Roles</option>
+          </select>
+          <select>
+            <option>All Status</option>
+          </select>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Last Login</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Admin User</strong><br><span>admin@bugasan...</span></td>
+              <td><span class="badge purple">Admin</span></td>
+              <td><span class="badge green">Active</span></td>
+              <td>2023-06-15 08:30 AM</td>
+              <td><a href="#">Edit</a> <a href="#" class="delete">Delete</a></td>
+            </tr>
+            <tr>
+              <td><strong>Maria Santos</strong><br><span>maria@bugasan...</span></td>
+              <td><span class="badge teal">Employee</span></td>
+              <td><span class="badge green">Active</span></td>
+              <td>2023-06-14 09:45 AM</td>
+              <td><a href="#">Edit</a> <a href="#" class="delete">Delete</a></td>
+            </tr>
+            <!-- Add more users as needed -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

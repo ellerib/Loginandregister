@@ -254,30 +254,36 @@
             </form>
         </div>
 
-        <!-- INDEX2 PHP -->
-      
-
-        
+        <!-- REGISTER  -->
     <form id="register-form" action="register.php" method="post" onsubmit="return validateForm()">
         <h2>Register</h2>
         <div class="form-group">
-            <input type="text" name="reg_username" id="reg-username" placeholder="Enter your username">
+            <input type="text" name="reg_fullname" id="reg-fullname" placeholder="Enter your fullname" required>
         </div>
         <div class="form-group">
-            <input type="email" name="reg_email" id="reg-email" placeholder="Enter your email">
+            <input type="text" name="reg_username" id="reg-username" placeholder="Enter your username" required>
+        </div>  
+        <div class="form-group">
+            <input type="email" name="reg_email" id="reg-email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-            <input type="password" name="reg_password" id="reg-password" placeholder="Enter your password">
+            <input type="password" name="reg_password" id="reg-password" placeholder="Enter your password" required>
         </div>
         <div class="form-group">
-            <input type="password" name="reg_confirm" id="reg-confirm" placeholder="Confirm your password">
+            <input type="password" name="reg_confirm" id="reg-confirm" placeholder="Confirm your password" required>
         </div>
+
         <button type="submit" class="btn">Register</button>
         <p id="register-msg" style="color: green; margin-top: 10px;"></p>
         <div class="links">
             <p>Already have an account? <a onclick="showLogin()">Sign In</a></p>
         </div>
     </form>
+
+
+
+        
+    
 
         <div class="card" id="forgot-form">
             <h2>Forgot Password</h2>
